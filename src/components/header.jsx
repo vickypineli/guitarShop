@@ -1,5 +1,5 @@
 
-function Header() {
+function Header(cart) {
     return (
         <header className="py-5 header">
         <div className="container-xl">

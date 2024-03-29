@@ -1,4 +1,4 @@
-function Guitar({ guitar, addToCart }) {
+function Guitar({guitar, addToCart}) {
 
     const { id, name, image, description, price } = guitar
 

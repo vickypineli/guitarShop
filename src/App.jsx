@@ -9,7 +9,11 @@ function App() {
     const [data] = useState(db)
     const [cart, setCart] = useState([])
 
-    const addToCart(item) {
+
+    const MAX_ITEMS = 5
+
+    // La función addToCart agrega un artículo al carrito de compras. Primero, verifica si el artículo ya está en el carrito. Si está, aumenta la cantidad. Si no está, agrega el artículo al carrito con una cantidad de 1.
+    function addToCart(item) {
         const itemExists = cart.findIndex(guitar => guitar.id === item.id)
         if(itemExists >= 0 ) { // existe en el carrito
           if(cart[itemExists].quantity >= MAX_ITEMS) return
@@ -20,10 +24,17 @@ function App() {
           item.quantity = 1
           setCart([...cart, item])
         }
-      }
+     }
+
+  function removeFromCart(id) {
+    setCart(prevCart => prevCart.filter(guitar => guitar.id !== id))
+  }
   return (
     <>
-        <Header />
+        <Header 
+            cart={cart}
+            removeFromCart={removeFromCart}
+        />
 
         <main className="container-xl mt-5">
             <h2 className="text-center">Nuestra Colección</h2>
@@ -33,6 +44,7 @@ function App() {
                         key={guitar.id} 
                         guitar={guitar} 
                         setCart={setCart}
+                        addToCart={addToCart}
 
                     />
                 ))}
