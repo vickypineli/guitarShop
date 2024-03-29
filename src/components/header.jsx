@@ -34,7 +34,7 @@ function Header() {
                                         </td>
                                         <td>SRV</td>
                                         <td className="fw-bold">
-                                                $299
+                                                299€
                                         </td>
                                         <td className="flex align-items-start gap-4">
                                             <button
@@ -63,7 +63,7 @@ function Header() {
                                 </tbody>
                             </table>
 
-                            <p className="text-end">Total pagar: <span className="fw-bold">$899</span></p>
+                            <p className="text-end">Total pagar: <span className="fw-bold">899€</span></p>
                             <button className="btn btn-dark w-100 mt-3 p-2">Vaciar Carrito</button>
                         </div>
                     </div>
