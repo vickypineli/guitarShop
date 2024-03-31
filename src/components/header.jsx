@@ -1,5 +1,6 @@
 
-function Header(cart) {
+function Header(cart, removeFromCart) {
+
     return (
         <header className="py-5 header">
         <div className="container-xl">
@@ -55,6 +56,7 @@ function Header(cart) {
                                             <button
                                                 className="btn btn-danger"
                                                 type="button"
+                                                onClick={() => removeFromCart(guitar.id)}
                                             >
                                                 X
                                             </button>
