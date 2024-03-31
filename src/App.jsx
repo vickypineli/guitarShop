@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Guitar from './components/guitar'
 import Header from './components/header'
 import {db } from './data/db'
